@@ -20,7 +20,7 @@ function Form({ addTask, task }) {
         value={input}
         onChange={onChange}
       />
-      <button onClick={onClick}>Add New Task</button>
+      <button onClick={onClick} className="formAddButton">Add New Task</button>
     </div>
   );
 }

@@ -4,15 +4,27 @@ import { useState } from "react";
 function Todo() {
   const [taskList, setTaskList] = useState([]);
   console.log(taskList);
+  const onClick = () => {
+    if(taskList.length !== 0){
+    setTaskList([]);
+    }
+  };
   return (
     <>
       <div className="todo-container">
         <Form addTask={setTaskList} task={taskList} />
-        <List taskList={taskList} />
+        <div className="todos">
+          <List taskList={taskList} />
+        </div>
         <hr />
-      </div>
-      <div className="todo-footer">
-        <div> {taskList.length} task left</div>
+
+        <div className="todo-footer">
+          <div> {taskList.length} task left</div>
+          <div></div>
+          <button onClick={onClick} className="formDeleteButton">
+            All Clear
+          </button>
+        </div>
       </div>
     </>
   );

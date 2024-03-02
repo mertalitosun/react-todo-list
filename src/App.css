@@ -20,10 +20,12 @@
 }
 .todo-container{
   width: 500px;
-  max-height: 500px;
   padding: 20px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-  overflow-y: scroll;
+}
+.todos{
+  max-height: 500px;
+  overflow-y:scroll;
 }
 input{
   padding: 20px;
@@ -45,12 +47,17 @@ ul,li{
   list-style: none;
 }
 .todo-footer{
+  margin-top: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
-button{
+.formAddButton{
   width: 100%;
   padding: 20px;
   background-color: antiquewhite;
+}
+.formDeleteButton{
+  width: 50%;
+  padding: 20px;
 }
